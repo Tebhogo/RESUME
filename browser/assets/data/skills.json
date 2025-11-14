@@ -1,0 +1,122 @@
+{
+  "primary": [
+    {
+      "name": "Java (Spring Framework)",
+      "description": "Backend development, microservices, and REST APIs",
+      "level": "Expert"
+    },
+    {
+      "name": "Python",
+      "description": "Data engineering, scripting, automation, and machine learning",
+      "level": "Expert"
+    },
+    {
+      "name": "SQL & Database Management",
+      "description": "Database design, creation, querying, optimization, and management. MSSQL Server administration",
+      "level": "Expert"
+    }
+  ],
+  "additional": [
+    {
+      "name": "Power BI",
+      "description": "Data visualization, dashboard design, and report development"
+    },
+    {
+      "name": "Power BI Reporting Server",
+      "description": "Configuration, deployment, and administration of Power BI Reporting Server"
+    },
+    {
+      "name": "MSSQL Server",
+      "description": "Microsoft SQL Server installation, configuration, and administration"
+    },
+    {
+      "name": "Database Creation & Design",
+      "description": "Designing and creating databases, tables, relationships, and stored procedures"
+    },
+    {
+      "name": "Data Visualization",
+      "description": "Proficiency in Tableau, Power BI, Google Data Studio"
+    },
+    {
+      "name": "Statistical Analysis",
+      "description": "Knowledge of R, SAS, SPSS for statistical analysis"
+    },
+    {
+      "name": "Data Interpretation",
+      "description": "Data interpretation and insight extraction from complex datasets"
+    },
+    {
+      "name": "Problem Solving",
+      "description": "Strong problem-solving abilities and critical thinking"
+    },
+    {
+      "name": "Critical Thinking",
+      "description": "Assess and analyze data trends with critical thinking"
+    },
+    {
+      "name": "Tableau",
+      "description": "Data visualization and dashboard creation"
+    },
+    {
+      "name": "Google Data Studio",
+      "description": "Interactive dashboard and report creation"
+    },
+    {
+      "name": "R Programming",
+      "description": "Statistical analysis and data science"
+    },
+    {
+      "name": "SAS",
+      "description": "Statistical analysis software"
+    },
+    {
+      "name": "SPSS",
+      "description": "Statistical Package for the Social Sciences"
+    },
+    {
+      "name": "Report Building",
+      "description": "30+ reports for OK Zimbabwe"
+    },
+    {
+      "name": "Dashboard Design",
+      "description": "Interactive and analytical dashboards"
+    },
+    {
+      "name": "Angular",
+      "description": "Modern web application development"
+    },
+    {
+      "name": "Flutter",
+      "description": "Cross-platform mobile application development"
+    },
+    {
+      "name": "HTML, CSS, JavaScript",
+      "description": "Frontend web development"
+    },
+    {
+      "name": "API Integration",
+      "description": "Connecting and integrating various APIs"
+    },
+    {
+      "name": "Excel (Advanced)",
+      "description": "Advanced Excel functions and data analysis"
+    },
+    {
+      "name": "Machine Learning",
+      "description": "In progress - developing ML models with Python"
+    },
+    {
+      "name": "Dynamics 365 (D365)",
+      "description": "Frontend and backend development, customization, and integration"
+    },
+    {
+      "name": "D365 Frontend",
+      "description": "Dynamics 365 frontend development and customization"
+    },
+    {
+      "name": "D365 Backend",
+      "description": "Dynamics 365 backend development, APIs, and integration"
+    }
+  ]
+}
+
