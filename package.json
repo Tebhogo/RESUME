@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy": "ng build --configuration production --base-href=/RESUME/ && npx angular-cli-ghpages --dir=dist/liynadah-portfolio/browser",
-    "build:react": "vite build --config vite-react.config.mjs",
+    "build:react": "vite build --config vite-react.config.mjs && echo. > dist-react/.nojekyll",
     "dev:react": "vite --config vite-react.config.mjs",
     "deploy:react": "npm run build:react && npx gh-pages -d dist-react"
   },
