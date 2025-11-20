@@ -142,7 +142,7 @@ function About() {
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                       <div>
                         <h4 className="text-xl font-bold text-black">OK Zimbabwe</h4>
-                        <p className="text-lg text-orange-500 font-semibold">Analyst Programmer & Power BI Manager</p>
+                        <p className="text-lg text-orange-500 font-semibold">Analyst Programmer & Power BI</p>
                       </div>
                       <span className="text-gray-600 font-medium mt-2 md:mt-0">2023 - PRESENT</span>
                     </div>
