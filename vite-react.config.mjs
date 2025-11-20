@@ -8,12 +8,15 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 export default defineConfig({
   plugins: [react()],
   base: '/RESUME/',
-  root: '.',
-  publicDir: 'src/assets',
+  root: resolve(__dirname, '.'),
+  publicDir: resolve(__dirname, 'src/assets'),
   build: {
-    outDir: 'dist-react',
+    outDir: resolve(__dirname, 'dist-react'),
     assetsDir: 'assets',
-    copyPublicDir: true
+    copyPublicDir: true,
+    rollupOptions: {
+      input: resolve(__dirname, 'index.html')
+    }
   },
   resolve: {
     alias: {
