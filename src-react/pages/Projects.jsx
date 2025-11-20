@@ -5,7 +5,7 @@ function Projects() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    fetch('assets/data/projects.json')
+    fetch('/RESUME/data/projects.json')
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(err => console.error('Error loading projects:', err))

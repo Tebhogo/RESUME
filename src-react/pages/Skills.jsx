@@ -5,7 +5,7 @@ function Skills() {
   const [additionalSkills, setAdditionalSkills] = useState([])
 
   useEffect(() => {
-    fetch('assets/data/skills.json')
+    fetch('/RESUME/data/skills.json')
       .then(res => res.json())
       .then(data => {
         setPrimarySkills(data.primary || [])
@@ -17,10 +17,10 @@ function Skills() {
   const getSkillIcon = (skillName) => {
     const name = skillName.toLowerCase()
     if (name.includes('java')) {
-      return <img src="assets/icons/java.png" alt="Java" className="w-12 h-12 object-contain" />
+      return <img src="/RESUME/icons/java.png" alt="Java" className="w-12 h-12 object-contain" />
     }
     if (name.includes('python')) {
-      return <img src="assets/icons/python.png" alt="Python" className="w-12 h-12 object-contain" />
+      return <img src="/RESUME/icons/python.png" alt="Python" className="w-12 h-12 object-contain" />
     }
     if (name.includes('sql') || name.includes('database')) {
       return (

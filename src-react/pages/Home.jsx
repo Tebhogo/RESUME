@@ -9,7 +9,7 @@ function Home() {
 
   useEffect(() => {
     // Load projects
-    fetch('assets/data/projects.json')
+    fetch('/RESUME/data/projects.json')
       .then(res => res.json())
       .then(data => {
         setFeaturedProjects(data.slice(0, 3))
@@ -17,7 +17,7 @@ function Home() {
       .catch(err => console.error('Error loading projects:', err))
 
     // Load skills
-    fetch('assets/data/skills.json')
+    fetch('/RESUME/data/skills.json')
       .then(res => res.json())
       .then(data => {
         setPrimarySkills(data.primary || [])
@@ -28,10 +28,10 @@ function Home() {
   const getIconForSkill = (skillName) => {
     const name = skillName.toLowerCase()
     if (name.includes('java')) {
-      return <img src="assets/icons/java.png" alt="Java" className="w-10 h-10 object-contain" />
+      return <img src="/RESUME/icons/java.png" alt="Java" className="w-10 h-10 object-contain" />
     }
     if (name.includes('python')) {
-      return <img src="assets/icons/python.png" alt="Python" className="w-10 h-10 object-contain" />
+      return <img src="/RESUME/icons/python.png" alt="Python" className="w-10 h-10 object-contain" />
     }
     if (name.includes('sql') || name.includes('database')) {
       return (

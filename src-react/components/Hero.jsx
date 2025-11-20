@@ -23,7 +23,7 @@ function Hero() {
           </div>
           <div className="flex justify-center">
             <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg border-4 border-orange-500">
-              <img src="assets/icons/LIyandah.jpeg" alt="Liyandah Hela" className="w-full h-full object-cover" />
+              <img src="/RESUME/icons/LIyandah.jpeg" alt="Liyandah Hela" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

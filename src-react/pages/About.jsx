@@ -8,7 +8,7 @@ function About() {
 
   useEffect(() => {
     // Load major projects
-    fetch('assets/data/projects.json')
+    fetch('/RESUME/data/projects.json')
       .then(res => res.json())
       .then(data => {
         setMajorProjects([
@@ -21,7 +21,7 @@ function About() {
       .catch(err => console.error('Error loading projects:', err))
 
     // Load skills
-    fetch('assets/data/skills.json')
+    fetch('/RESUME/data/skills.json')
       .then(res => res.json())
       .then(data => {
         setPrimarySkills(data.primary || [])
@@ -66,10 +66,10 @@ function About() {
   const getSkillIcon = (skillName) => {
     const name = skillName.toLowerCase()
     if (name.includes('java')) {
-      return <img src="assets/icons/java.png" alt="Java" className="w-6 h-6 object-contain" />
+      return <img src="/RESUME/icons/java.png" alt="Java" className="w-6 h-6 object-contain" />
     }
     if (name.includes('python')) {
-      return <img src="assets/icons/python.png" alt="Python" className="w-6 h-6 object-contain" />
+      return <img src="/RESUME/icons/python.png" alt="Python" className="w-6 h-6 object-contain" />
     }
     if (name.includes('sql') || name.includes('database')) {
       return (
@@ -95,7 +95,7 @@ function About() {
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 mb-8">
               <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg border-4 border-orange-500 flex-shrink-0">
-                <img src="assets/icons/LIyandah.jpeg" alt="Liyandah Hela" className="w-full h-full object-cover" />
+                <img src="/RESUME/icons/LIyandah.jpeg" alt="Liyandah Hela" className="w-full h-full object-cover" />
               </div>
               <div className="flex-1 text-center md:text-left">
                 <h2 className="text-3xl font-bold text-black mb-2">Liyandah Tebhogo Hela</h2>
@@ -295,7 +295,7 @@ function About() {
                   <div className="bg-white border-l-4 border-orange-500 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-3 text-white overflow-hidden">
-                        <img src="assets/icons/java.png" alt="Java" className="w-8 h-8 object-contain" />
+                        <img src="/RESUME/icons/java.png" alt="Java" className="w-8 h-8 object-contain" />
                       </div>
                       <h4 className="text-xl font-bold text-black">Java (Spring Framework)</h4>
                     </div>
@@ -305,7 +305,7 @@ function About() {
                   <div className="bg-white border-l-4 border-orange-500 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
                     <div className="flex items-center mb-3">
                       <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mr-3 text-white overflow-hidden">
-                        <img src="assets/icons/python.png" alt="Python" className="w-8 h-8 object-contain" />
+                        <img src="/RESUME/icons/python.png" alt="Python" className="w-8 h-8 object-contain" />
                       </div>
                       <h4 className="text-xl font-bold text-black">Python</h4>
                     </div>

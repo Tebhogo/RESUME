@@ -12,7 +12,8 @@ export default defineConfig({
   publicDir: 'src/assets',
   build: {
     outDir: 'dist-react',
-    assetsDir: 'assets'
+    assetsDir: 'assets',
+    copyPublicDir: true
   },
   resolve: {
     alias: {
