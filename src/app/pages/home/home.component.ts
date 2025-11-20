@@ -110,11 +110,11 @@ export class HomeComponent implements OnInit {
   }
 
   loadData() {
-    this.http.get<any[]>('/assets/data/projects.json').subscribe(projects => {
+    this.http.get<any[]>('assets/data/projects.json').subscribe(projects => {
       this.featuredProjects = projects.slice(0, 3);
     });
     
-    this.http.get<any>('/assets/data/skills.json').subscribe(skills => {
+    this.http.get<any>('assets/data/skills.json').subscribe(skills => {
       this.primarySkills = skills.primary;
     });
   }

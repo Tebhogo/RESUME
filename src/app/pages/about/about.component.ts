@@ -407,7 +407,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     // Load the major projects
-    this.http.get<any[]>('/assets/data/projects.json').subscribe(projects => {
+    this.http.get<any[]>('assets/data/projects.json').subscribe(projects => {
       // Get the major projects: Stock Take App, Power BI Sales Dashboard, Report Builder, and Cyber Cotheth Tech Networks
       this.majorProjects = [
         projects.find(p => p.id === 1), // Stock Take App
@@ -418,7 +418,7 @@ export class AboutComponent implements OnInit {
     });
     
     // Load skills
-    this.http.get<any>('/assets/data/skills.json').subscribe(skills => {
+    this.http.get<any>('assets/data/skills.json').subscribe(skills => {
       this.primarySkills = skills.primary;
       this.additionalSkills = skills.additional;
     });

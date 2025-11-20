@@ -34,7 +34,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<Project[]>('/assets/data/projects.json').subscribe(data => {
+    this.http.get<Project[]>('assets/data/projects.json').subscribe(data => {
       this.projects = data;
     });
   }

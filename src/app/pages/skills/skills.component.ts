@@ -109,7 +109,7 @@ export class SkillsComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<any>('/assets/data/skills.json').subscribe(data => {
+    this.http.get<any>('assets/data/skills.json').subscribe(data => {
       this.primarySkills = data.primary;
       this.additionalSkills = data.additional;
     });
