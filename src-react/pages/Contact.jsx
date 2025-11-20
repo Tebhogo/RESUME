@@ -40,18 +40,32 @@ function Contact() {
     return newErrors
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const newErrors = validate()
     
     if (Object.keys(newErrors).length === 0) {
-      console.log('Form submitted:', formData)
-      setSubmitted(true)
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setFormData({ name: '', email: '', message: '' })
-        setSubmitted(false)
-      }, 3000)
+      try {
+        // Option 1: Use mailto: to open default email client (works immediately, no setup needed)
+        const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`)
+        const body = encodeURIComponent(
+          `Hello Liyandah,\n\nYou received a message from your portfolio website:\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\n---\nThis message was sent from your portfolio contact form.`
+        )
+        const mailtoLink = `mailto:liyandahhella12@gmail.com?subject=${subject}&body=${body}`
+        
+        // Open email client with pre-filled message
+        window.location.href = mailtoLink
+        
+        setSubmitted(true)
+        // Reset form after 5 seconds
+        setTimeout(() => {
+          setFormData({ name: '', email: '', message: '' })
+          setSubmitted(false)
+        }, 5000)
+      } catch (error) {
+        console.error('Error sending message:', error)
+        setErrors({ submit: 'Failed to open email client. Please email directly to liyandahhella12@gmail.com' })
+      }
     } else {
       setErrors(newErrors)
     }
@@ -151,8 +165,14 @@ function Contact() {
               
               {submitted && (
                 <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                  <p className="font-semibold">✓ Message sent successfully!</p>
-                  <p className="text-sm mt-1">Thank you for your message. I'll get back to you soon.</p>
+                  <p className="font-semibold">✓ Opening your email client...</p>
+                  <p className="text-sm mt-1">Your default email client should open with the message pre-filled to <strong>liyandahhella12@gmail.com</strong>. If it doesn't open, please email directly to <a href="mailto:liyandahhella12@gmail.com" className="underline font-semibold">liyandahhella12@gmail.com</a></p>
+                </div>
+              )}
+              
+              {errors.submit && (
+                <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                  <p className="text-sm">{errors.submit}</p>
                 </div>
               )}
               

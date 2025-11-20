@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Stock Take App – OK Zimbabwe",
+    "title": "Stock Take App",
     "description": "Designed and developed a stock take application with full inventory modules and reporting tools. Created more than 30 data-driven reports. Built with Java Spring Framework for backend REST APIs and Flutter for cross-platform mobile frontend.",
     "technologies": ["Java Spring Framework", "Flutter", "SQL", "REST APIs", "Reporting", "Mobile App"],
     "tags": ["Enterprise", "Inventory Management", "Mobile Development", "Full Stack", "Reporting"],
