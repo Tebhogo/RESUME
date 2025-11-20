@@ -8,7 +8,7 @@ function Reports() {
           </h1>
           <div className="w-24 h-1 bg-orange-500 mx-auto mb-4"></div>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Over 30+ custom operational and analytical reports developed for OK Zimbabwe
+            Over 30+ custom operational and analytical reports developed
           </p>
         </div>
         
@@ -17,7 +17,7 @@ function Reports() {
             <div>
               <h2 className="text-3xl font-bold text-black mb-4">Report Builder Project</h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                I have created more than 30+ custom operational and analytical reports across various departments for OK Zimbabwe. These reports provide critical business insights and support data-driven decision making. I have also configured Power BI Reporting Server infrastructure and designed MSSQL databases to support enterprise reporting needs.
+                I have created more than 30+ custom operational and analytical reports across various departments. These reports provide critical business insights and support data-driven decision making. I have also configured Power BI Reporting Server infrastructure and designed MSSQL databases to support enterprise reporting needs.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -81,7 +81,7 @@ function Reports() {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
             <div className="text-4xl font-bold text-orange-500 mb-2">30+</div>
             <div className="text-gray-600">Reports Created</div>
@@ -89,10 +89,6 @@ function Reports() {
           <div className="bg-white rounded-lg shadow-md p-6 text-center">
             <div className="text-4xl font-bold text-orange-500 mb-2">100%</div>
             <div className="text-gray-600">Data-Driven</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 text-center">
-            <div className="text-4xl font-bold text-orange-500 mb-2">OK</div>
-            <div className="text-gray-600">Zimbabwe</div>
           </div>
         </div>
         
