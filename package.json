@@ -7,7 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --configuration production --base-href=/RESUME/ && npx angular-cli-ghpages --dir=dist/liynadah-portfolio/browser"
+    "deploy": "ng build --configuration production --base-href=/RESUME/ && npx angular-cli-ghpages --dir=dist/liynadah-portfolio/browser",
+    "build:react": "vite build --config vite-react.config.mjs",
+    "dev:react": "vite --config vite-react.config.mjs",
+    "deploy:react": "npm run build:react && npx gh-pages -d dist-react"
   },
   "private": true,
   "dependencies": {
@@ -28,10 +31,16 @@
     "@angular/cli": "^17.0.0",
     "@angular/compiler-cli": "^17.0.0",
     "@types/node": "^18.7.0",
+    "@vitejs/plugin-react": "^5.1.1",
     "angular-cli-ghpages": "^2.0.3",
     "autoprefixer": "^10.4.16",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.31",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.6",
     "tailwindcss": "^3.3.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.2.2",
+    "vite": "^5.4.21"
   }
 }

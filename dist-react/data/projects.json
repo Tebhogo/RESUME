@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "title": "Stock Take App – OK Zimbabwe",
+    "description": "Designed and developed a stock take application with full inventory modules and reporting tools. Created more than 30 data-driven reports. Built with Java Spring Framework for backend REST APIs and Flutter for cross-platform mobile frontend.",
+    "technologies": ["Java Spring Framework", "Flutter", "SQL", "REST APIs", "Reporting", "Mobile App"],
+    "tags": ["Enterprise", "Inventory Management", "Mobile Development", "Full Stack", "Reporting"],
+    "image": "/assets/images/stock-take.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Power BI Sales Dashboard",
+    "description": "Built an interactive Power BI dashboard for sales performance analytics and insights.",
+    "technologies": ["Power BI", "Data Visualization", "DAX"],
+    "tags": ["Dashboard", "Analytics", "Sales"],
+    "image": "/assets/images/powerbi-dashboard.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Order Fill Dashboard",
+    "description": "Developed an analytics dashboard used for monitoring order fill rates and KPIs.",
+    "technologies": ["Power BI", "SQL", "Excel"],
+    "tags": ["Dashboard", "KPI", "Analytics"],
+    "image": "/assets/images/order-fill.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Cyber Cotheth Tech Networks Website",
+    "description": "Designed and built a modern responsive website for Cyber Cotheth Tech Networks - an AI-powered web development platform providing comprehensive technology solutions for Zimbabwe businesses.",
+    "technologies": ["HTML", "CSS", "JavaScript", "Angular"],
+    "tags": ["Web Development", "Responsive", "Modern UI"],
+    "image": "/assets/images/cyber-cothe.jpg",
+    "website": "https://tebhogo.github.io/Cyber-Cotheth-tech-networks-"
+  },
+  {
+    "id": 5,
+    "title": "Interactive Website Project",
+    "description": "Built a dynamic, high-engagement website with an interactive user interface.",
+    "technologies": ["Angular", "JavaScript", "Tailwind"],
+    "tags": ["Web Development", "Interactive", "Modern UI"],
+    "image": "/assets/images/interactive-website.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Report Builder Project – OK Zimbabwe",
+    "description": "Created more than 30+ custom operational and analytical reports across departments.",
+    "technologies": ["SQL", "Power BI", "Excel", "Reporting Tools"],
+    "tags": ["Reporting", "Business Intelligence", "Data Analysis"],
+    "image": "/assets/images/report-builder.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Power BI Reporting Server Configuration",
+    "description": "Configured and deployed Power BI Reporting Server infrastructure for enterprise reporting. Set up server instances, configured data sources, and established secure access for report distribution.",
+    "technologies": ["Power BI Reporting Server", "MSSQL Server", "Server Configuration", "Enterprise BI"],
+    "tags": ["Power BI", "Server Administration", "Enterprise", "Reporting Infrastructure"],
+    "image": "/assets/images/powerbi-server.jpg"
+  },
+  {
+    "id": 9,
+    "title": "MSSQL Database Design & Creation",
+    "description": "Designed and created multiple MSSQL Server databases for enterprise applications. Implemented database schemas, relationships, stored procedures, and optimized query performance.",
+    "technologies": ["MSSQL Server", "Database Design", "SQL", "Stored Procedures"],
+    "tags": ["Database", "MSSQL", "Database Design", "Enterprise"],
+    "image": "/assets/images/database-design.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Machine Learning Model (In Progress)",
+    "description": "Currently developing and training a machine learning model using Python.",
+    "technologies": ["Python", "Pandas", "Scikit-Learn"],
+    "tags": ["Machine Learning", "Data Science", "Python"],
+    "image": "/assets/images/ml-model.jpg"
+  }
+]
+

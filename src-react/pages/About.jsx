@@ -8,7 +8,7 @@ function About() {
 
   useEffect(() => {
     // Load major projects
-    fetch('/RESUME/assets/data/projects.json')
+    fetch('assets/data/projects.json')
       .then(res => res.json())
       .then(data => {
         setMajorProjects([
@@ -21,7 +21,7 @@ function About() {
       .catch(err => console.error('Error loading projects:', err))
 
     // Load skills
-    fetch('/RESUME/assets/data/skills.json')
+    fetch('assets/data/skills.json')
       .then(res => res.json())
       .then(data => {
         setPrimarySkills(data.primary || [])

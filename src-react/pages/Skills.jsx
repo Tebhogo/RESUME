@@ -5,7 +5,7 @@ function Skills() {
   const [additionalSkills, setAdditionalSkills] = useState([])
 
   useEffect(() => {
-    fetch('/RESUME/assets/data/skills.json')
+    fetch('assets/data/skills.json')
       .then(res => res.json())
       .then(data => {
         setPrimarySkills(data.primary || [])
