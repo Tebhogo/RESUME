@@ -271,7 +271,7 @@ import { DownloadService } from '../../services/download.service';
                       <span class="px-6 py-3 bg-white text-orange-700 rounded-full font-bold text-lg shadow-md inline-block">English (Fluent)</span>
                     </div>
                     <div class="text-center md:text-left">
-                      <span class="px-6 py-3 bg-white text-orange-700 rounded-full font-bold text-lg shadow-md inline-block">Shona</span>
+                      <span class="px-6 py-3 bg-white text-orange-700 rounded-full font-bold text-lg shadow-md inline-block">Shona (Native)</span>
                     </div>
                   </div>
                 </div>

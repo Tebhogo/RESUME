@@ -184,7 +184,7 @@ def build_cv() -> None:
         pdf.ln(1)
 
     pdf.section_title("Languages")
-    pdf.body_text("English (Fluent), Shona")
+    pdf.body_text("English (Fluent), Shona (Native)")
 
     pdf.section_title("Licences")
     pdf.body_text("Class 4 Driver's Licence (Zimbabwe)")

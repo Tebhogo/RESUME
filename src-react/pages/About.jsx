@@ -349,7 +349,7 @@ function About() {
                       <span className="px-6 py-3 bg-white text-orange-700 rounded-full font-bold text-lg shadow-md inline-block">English (Fluent)</span>
                     </div>
                     <div className="text-center md:text-left">
-                      <span className="px-6 py-3 bg-white text-orange-700 rounded-full font-bold text-lg shadow-md inline-block">Shona</span>
+                      <span className="px-6 py-3 bg-white text-orange-700 rounded-full font-bold text-lg shadow-md inline-block">Shona (Native)</span>
                     </div>
                   </div>
                 </div>
