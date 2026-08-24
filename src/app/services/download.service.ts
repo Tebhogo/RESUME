@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class DownloadService {
-  private cvPath = '/assets/cv/liynadah_hela_cv.pdf';
+  private cvPath = 'assets/cv/liynadah_hela_cv.pdf';
 
   constructor(private http: HttpClient) {}
 

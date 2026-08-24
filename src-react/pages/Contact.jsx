@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { downloadCV } from '../utils/downloadCv'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -121,6 +122,18 @@ function Contact() {
                   <a href="https://github.com/Tebhogo" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600">
                     github.com/Tebhogo
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <svg className="w-6 h-6 text-orange-500 mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <h3 className="font-bold text-black mb-1">CV Download</h3>
+                  <button type="button" onClick={downloadCV} className="text-orange-500 hover:text-orange-600">
+                    Download CV (PDF)
+                  </button>
                 </div>
               </div>
             </div>

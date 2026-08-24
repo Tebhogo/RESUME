@@ -2,7 +2,7 @@
   "primary": [
     {
       "name": "Java (Spring Framework)",
-      "description": "Backend development, microservices, and REST APIs",
+      "description": "Backend development, microservices, REST APIs, and payment systems",
       "level": "Expert"
     },
     {
@@ -12,11 +12,15 @@
     },
     {
       "name": "SQL & Database Management",
-      "description": "Database design, creation, querying, optimization, and management. MSSQL Server administration",
+      "description": "Database design, creation, querying, optimization, and MSSQL Server administration",
       "level": "Expert"
     }
   ],
   "additional": [
+    {
+      "name": "Payment Gateway Integration",
+      "description": "EcoCash, Omari, InnBucks, ZimSwitch, and merchant wallet APIs"
+    },
     {
       "name": "Power BI",
       "description": "Data visualization, dashboard design, and report development"
@@ -28,6 +32,14 @@
     {
       "name": "MSSQL Server",
       "description": "Microsoft SQL Server installation, configuration, and administration"
+    },
+    {
+      "name": "ETL & Data Pipelines",
+      "description": "SSIS, data modeling, and cloud data engineering workflows"
+    },
+    {
+      "name": "Microsoft Azure",
+      "description": "Azure data engineering, core data concepts, and cloud analytics"
     },
     {
       "name": "Database Creation & Design",
@@ -116,7 +128,10 @@
     {
       "name": "D365 Backend",
       "description": "Dynamics 365 backend development, APIs, and integration"
+    },
+    {
+      "name": "Class 4 Driver's Licence",
+      "description": "Holder of a valid Class 4 driver's licence (Zimbabwe)"
     }
   ]
 }
-

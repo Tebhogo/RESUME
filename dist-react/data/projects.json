@@ -1,5 +1,21 @@
 [
   {
+    "id": 10,
+    "title": "AngwaPay Payment Gateway",
+    "description": "Secure payment gateway and financial management platform for businesses in Zimbabwe. Supports payment collection, deposits, withdrawals, merchant wallets, and financial reporting with integrations for EcoCash, Omari, InnBucks, and ZimSwitch. Built with scalable APIs, transaction tracking, and automated status updates.",
+    "technologies": ["Java Spring Boot", "REST APIs", "Payment Integration", "SQL", "Angular"],
+    "tags": ["Fintech", "Payment Gateway", "Full Stack", "Enterprise"],
+    "image": "/assets/images/angwapay.jpg"
+  },
+  {
+    "id": 11,
+    "title": "CCTN Point of Sale System",
+    "description": "Retail management and POS system for managing sales, inventory, customers, and daily operations. Features product and stock tracking, receipt generation, sales processing, and business performance dashboards.",
+    "technologies": ["Java Spring Boot", "Angular", "SQL", "REST APIs"],
+    "tags": ["Retail", "POS", "Inventory", "Full Stack"],
+    "image": "/assets/images/cctn-pos.jpg"
+  },
+  {
     "id": 1,
     "title": "Stock Take App",
     "description": "Designed and developed a stock take application with full inventory modules and reporting tools. Created more than 30 data-driven reports. Built with Java Spring Framework for backend REST APIs and Flutter for cross-platform mobile frontend.",
@@ -73,4 +89,3 @@
     "image": "/assets/images/ml-model.jpg"
   }
 ]
-

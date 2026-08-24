@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { downloadCV } from '../utils/downloadCv'
 
 function Hero() {
   return (
@@ -19,6 +20,9 @@ function Hero() {
               <Link to="/contact" className="btn-primary text-center">
                 Get In Touch
               </Link>
+              <button type="button" onClick={downloadCV} className="btn-secondary text-center">
+                Download CV (PDF)
+              </button>
             </div>
           </div>
           <div className="flex justify-center">

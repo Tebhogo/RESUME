@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { downloadCV } from '../utils/downloadCv'
 
 function About() {
   const [majorProjects, setMajorProjects] = useState([])
   const [primarySkills, setPrimarySkills] = useState([])
   const [additionalSkills, setAdditionalSkills] = useState([])
+  const [references, setReferences] = useState([])
+  const [referencesAvailableOnRequest, setReferencesAvailableOnRequest] = useState(true)
 
   useEffect(() => {
     // Load major projects
@@ -28,6 +31,14 @@ function About() {
         setAdditionalSkills(data.additional || [])
       })
       .catch(err => console.error('Error loading skills:', err))
+
+    fetch('/RESUME/data/references.json')
+      .then(res => res.json())
+      .then(data => {
+        setReferencesAvailableOnRequest(data.availableOnRequest ?? true)
+        setReferences(data.references ?? [])
+      })
+      .catch(err => console.error('Error loading references:', err))
   }, [])
 
   const getProjectIcon = (title) => {
@@ -125,6 +136,11 @@ function About() {
                       GitHub Profile
                     </a>
                   </p>
+                </div>
+                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+                  <button type="button" onClick={downloadCV} className="btn-primary">
+                    Download CV (PDF)
+                  </button>
                 </div>
               </div>
             </div>
@@ -349,6 +365,32 @@ function About() {
                 <div className="bg-gradient-to-r from-orange-50 to-orange-100 rounded-lg p-6">
                   <span className="px-6 py-3 bg-white text-orange-700 rounded-full font-bold text-lg shadow-md inline-block">Class 4 Driver's Licence (Zimbabwe)</span>
                 </div>
+              </div>
+
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold text-black mb-4 flex items-center">
+                  <svg className="w-6 h-6 text-orange-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  References
+                </h3>
+                {referencesAvailableOnRequest ? (
+                  <div className="bg-white border-l-4 border-orange-500 rounded-lg shadow-md p-6">
+                    <p className="text-gray-700">Professional references available upon request.</p>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {references.map((reference, index) => (
+                      <div key={index} className="bg-white border-l-4 border-orange-500 rounded-lg shadow-md p-6">
+                        <h4 className="text-lg font-bold text-black">{reference.name}</h4>
+                        <p className="text-orange-500 font-semibold">{reference.title} | {reference.company}</p>
+                        <p className="text-gray-600 text-sm mt-2">{reference.relationship}</p>
+                        {reference.phone && <p className="text-gray-600 text-sm">Phone: {reference.phone}</p>}
+                        {reference.email && <p className="text-gray-600 text-sm">Email: {reference.email}</p>}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
               
               {/* Programming Languages & Technologies */}

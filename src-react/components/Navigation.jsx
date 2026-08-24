@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { downloadCV } from '../utils/downloadCv'
 
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -17,7 +18,7 @@ function Navigation() {
             </Link>
           </div>
           
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <Link 
               to="/" 
               className={`transition-colors font-medium ${
@@ -66,6 +67,9 @@ function Navigation() {
             >
               Contact
             </Link>
+            <button type="button" onClick={downloadCV} className="btn-primary py-2 px-4 text-sm">
+              Download CV
+            </button>
           </div>
           
           <div className="md:hidden">
@@ -142,6 +146,13 @@ function Navigation() {
             >
               Contact
             </Link>
+            <button
+              type="button"
+              onClick={() => { downloadCV(); setIsMenuOpen(false) }}
+              className="block w-full text-left px-3 py-2 text-orange-500 hover:bg-orange-50 rounded-md font-semibold"
+            >
+              Download CV
+            </button>
           </div>
         </div>
       )}

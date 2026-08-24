@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { DownloadService } from '../../services/download.service';
 
 @Component({
   selector: 'app-contact',
@@ -57,6 +58,18 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
                   <a href="https://github.com/Tebhogo" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-600">
                     github.com/Tebhogo
                   </a>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-orange-500 mr-4 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                  <h3 class="font-bold text-black mb-1">CV Download</h3>
+                  <button type="button" (click)="downloadCV()" class="text-orange-500 hover:text-orange-600">
+                    Download CV (PDF)
+                  </button>
                 </div>
               </div>
             </div>
@@ -129,7 +142,7 @@ export class ContactComponent {
   contactForm: FormGroup;
   submitted = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private downloadService: DownloadService) {
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -152,6 +165,10 @@ export class ContactComponent {
         this.contactForm.get(key)?.markAsTouched();
       });
     }
+  }
+
+  downloadCV(): void {
+    this.downloadService.downloadCV();
   }
 }
 

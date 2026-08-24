@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { DownloadService } from '../../services/download.service';
 
 @Component({
   selector: 'app-navigation',
@@ -16,7 +17,7 @@ import { RouterModule } from '@angular/router';
             </a>
           </div>
           
-          <div class="hidden md:flex space-x-8">
+          <div class="hidden md:flex items-center space-x-6">
             <a routerLink="/" routerLinkActive="text-orange-500" [routerLinkActiveOptions]="{exact: true}" 
                class="text-black hover:text-orange-500 transition-colors font-medium">
               Home
@@ -41,6 +42,9 @@ import { RouterModule } from '@angular/router';
                class="text-black hover:text-orange-500 transition-colors font-medium">
               Contact
             </a>
+            <button type="button" (click)="downloadCV()" class="btn-primary py-2 px-4 text-sm">
+              Download CV
+            </button>
           </div>
           
           <!-- Mobile menu button -->
@@ -82,6 +86,10 @@ import { RouterModule } from '@angular/router';
              class="block px-3 py-2 text-black hover:bg-orange-50 hover:text-orange-500 rounded-md">
             Contact
           </a>
+          <button type="button" (click)="downloadCV(); closeMenu()" 
+             class="block w-full text-left px-3 py-2 text-orange-500 hover:bg-orange-50 rounded-md font-semibold">
+            Download CV
+          </button>
         </div>
       </div>
     </nav>
@@ -91,12 +99,18 @@ import { RouterModule } from '@angular/router';
 export class NavigationComponent {
   isMenuOpen = false;
 
+  constructor(private downloadService: DownloadService) {}
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  downloadCV(): void {
+    this.downloadService.downloadCV();
   }
 }
 

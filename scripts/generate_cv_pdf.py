@@ -1,10 +1,13 @@
 """Generate liynadah_hela_cv.pdf from portfolio content."""
 
+import json
 from pathlib import Path
 
 from fpdf import FPDF
 
-OUTPUT = Path(__file__).resolve().parent.parent / "src" / "assets" / "cv" / "liynadah_hela_cv.pdf"
+ROOT = Path(__file__).resolve().parent.parent
+OUTPUT = ROOT / "src" / "assets" / "cv" / "liynadah_hela_cv.pdf"
+REFERENCES_FILE = ROOT / "src" / "assets" / "data" / "references.json"
 
 
 class CV(FPDF):
@@ -57,7 +60,14 @@ def build_cv() -> None:
     pdf.cell(
         0,
         5,
-        "Email: liyandahhella12@gmail.com  |  LinkedIn: linkedin.com/in/liyandah-hela-b48481166  |  GitHub: github.com/Tebhogo",
+        "Email: liyandahhella12@gmail.com | Phone: +263 774 914 287 / +263 786 272 730",
+        new_x="LMARGIN",
+        new_y="NEXT",
+    )
+    pdf.cell(
+        0,
+        5,
+        "LinkedIn: linkedin.com/in/liyandah-hela-b48481166 | GitHub: github.com/Tebhogo",
         new_x="LMARGIN",
         new_y="NEXT",
     )
@@ -178,6 +188,37 @@ def build_cv() -> None:
 
     pdf.section_title("Licences")
     pdf.body_text("Class 4 Driver's Licence (Zimbabwe)")
+
+    pdf.section_title("References")
+    if REFERENCES_FILE.exists():
+        data = json.loads(REFERENCES_FILE.read_text(encoding="utf-8"))
+        references = data.get("references", [])
+        available_on_request = data.get("availableOnRequest", True)
+        if available_on_request or not references:
+            pdf.body_text("Professional references available upon request.")
+        else:
+            for reference in references:
+                pdf.set_font("Helvetica", "B", 10)
+                pdf.set_text_color(20, 20, 20)
+                pdf.cell(0, 5, reference.get("name", ""), new_x="LMARGIN", new_y="NEXT")
+                pdf.set_font("Helvetica", "", 9)
+                pdf.set_text_color(80, 80, 80)
+                pdf.cell(
+                    0,
+                    5,
+                    f"{reference.get('title', '')} | {reference.get('company', '')}",
+                    new_x="LMARGIN",
+                    new_y="NEXT",
+                )
+                if reference.get("relationship"):
+                    pdf.cell(0, 5, reference["relationship"], new_x="LMARGIN", new_y="NEXT")
+                if reference.get("phone"):
+                    pdf.cell(0, 5, f"Phone: {reference['phone']}", new_x="LMARGIN", new_y="NEXT")
+                if reference.get("email"):
+                    pdf.cell(0, 5, f"Email: {reference['email']}", new_x="LMARGIN", new_y="NEXT")
+                pdf.ln(2)
+    else:
+        pdf.body_text("Professional references available upon request.")
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     pdf.output(str(OUTPUT))

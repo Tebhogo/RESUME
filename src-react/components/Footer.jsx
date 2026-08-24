@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { downloadCV } from '../utils/downloadCv'
 
 function Footer() {
   const currentYear = new Date().getFullYear()
@@ -33,6 +34,11 @@ function Footer() {
                 <a href="https://github.com/Tebhogo" target="_blank" rel="noopener noreferrer" className="hover:text-orange-500 transition-colors">
                   GitHub Profile
                 </a>
+              </p>
+              <p className="flex items-center">
+                <button type="button" onClick={downloadCV} className="hover:text-orange-500 transition-colors text-left">
+                  Download CV (PDF)
+                </button>
               </p>
             </div>
           </div>

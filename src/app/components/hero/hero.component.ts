@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { DownloadService } from '../../services/download.service';
 
 @Component({
   selector: 'app-hero',
@@ -24,6 +25,9 @@ import { RouterModule } from '@angular/router';
               <a routerLink="/contact" class="btn-primary text-center">
                 Get In Touch
               </a>
+              <button type="button" (click)="downloadCV()" class="btn-secondary text-center">
+                Download CV (PDF)
+              </button>
             </div>
           </div>
           <div class="flex justify-center">
@@ -37,5 +41,11 @@ import { RouterModule } from '@angular/router';
   `,
   styles: []
 })
-export class HeroComponent {}
+export class HeroComponent {
+  constructor(private downloadService: DownloadService) {}
+
+  downloadCV(): void {
+    this.downloadService.downloadCV();
+  }
+}
 

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { DownloadService } from '../../services/download.service';
 
 @Component({
   selector: 'app-footer',
@@ -38,6 +39,11 @@ import { RouterModule } from '@angular/router';
                   GitHub Profile
                 </a>
               </p>
+              <p class="flex items-center">
+                <button type="button" (click)="downloadCV()" class="hover:text-orange-500 transition-colors text-left">
+                  Download CV (PDF)
+                </button>
+              </p>
             </div>
           </div>
           
@@ -65,5 +71,11 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
   currentYear = new Date().getFullYear();
+
+  constructor(private downloadService: DownloadService) {}
+
+  downloadCV(): void {
+    this.downloadService.downloadCV();
+  }
 }
 
