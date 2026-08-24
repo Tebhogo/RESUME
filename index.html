@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Liyandah Tebhogo Hela - Full Stack Software Engineer</title>
     <base href="/RESUME/" />
+    <script type="text/javascript">
+      // Restore SPA routes after GitHub Pages 404 redirect
+      // https://github.com/rafgraph/spa-github-pages
+      (function (location) {
+        if (location.search[1] === '/') {
+          var decoded = location.search.slice(1).split('&').map(function (segment) {
+            return segment.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null, location.pathname.slice(0, -1) + decoded + location.hash);
+        }
+      }(window.location));
+    </script>
   </head>
   <body>
     <div id="root"></div>
