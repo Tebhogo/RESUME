@@ -1,4 +1,29 @@
 {
-  "availableOnRequest": true,
-  "references": []
+  "availableOnRequest": false,
+  "references": [
+    {
+      "name": "Blessing Manjozi",
+      "title": "Development Manager",
+      "company": "OK Zimbabwe",
+      "phone": "+263 777 736 125",
+      "email": "bmanjozi@okzim.co.zw",
+      "relationship": "Development Manager"
+    },
+    {
+      "name": "Willium Chikwenje",
+      "title": "ITC Manager",
+      "company": "Gain Cash and Carry",
+      "phone": "+263 772 282 293",
+      "email": "wiliumchikwenje@gmail.com",
+      "relationship": "ITC Manager"
+    },
+    {
+      "name": "Sunungukai Manasango",
+      "title": "IT Director",
+      "company": "ANGWA PAY",
+      "phone": "+263 77 382 8055",
+      "email": "sunu@angwapy.com",
+      "relationship": "IT Director"
+    }
+  ]
 }
